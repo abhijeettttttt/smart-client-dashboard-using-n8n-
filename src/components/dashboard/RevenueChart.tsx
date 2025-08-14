@@ -28,7 +28,7 @@ export function RevenueChart({ data }: RevenueChartProps) {
             <YAxis 
               stroke="hsl(180, 100%, 70%)"
               fontSize={12}
-              tickFormatter={(value) => `$${value.toLocaleString()}`}
+              tickFormatter={(value) => `₹${value.toLocaleString()}`}
             />
             <Line 
               type="monotone" 

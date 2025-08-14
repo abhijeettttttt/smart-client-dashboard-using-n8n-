@@ -131,9 +131,12 @@
   }
 
   .glass-hover {
-    @apply transition-all duration-300 hover:border-[hsla(180,100%,50%,0.5)];
-    @apply hover:shadow-[0_8px_32px_hsla(180,100%,50%,0.2)];
-    @apply hover:bg-gradient-to-br hover:from-[hsla(240,20%,15%,0.4)] hover:to-[hsla(180,100%,50%,0.15)];
+    @apply transition-all duration-300;
+  }
+
+  .glass-hover:hover {
+    @apply border-[hsla(180,100%,50%,0.5)] shadow-[0_8px_32px_hsla(180,100%,50%,0.2)];
+    @apply bg-gradient-to-br from-[hsla(240,20%,15%,0.4)] to-[hsla(180,100%,50%,0.15)];
   }
 
   /* Neon Glow Effects */

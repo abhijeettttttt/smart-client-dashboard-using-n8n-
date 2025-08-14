@@ -25,7 +25,10 @@ const Index = () => {
     const totalClients = data.length;
     const totalHeadshots = data.reduce((sum, item) => sum + item.headshots, 0);
     const averagePrice = totalRevenue / totalClients || 0;
-    const completedProjects = data.filter(item => item.status.toLowerCase() === 'completed').length;
+    const completedProjects = data.filter(item => 
+      item.status.toLowerCase() === 'completed' || 
+      item.status.toLowerCase() === 'delivered'
+    ).length;
     
     // Generate monthly revenue data for chart
     const revenueData = [
@@ -61,8 +64,8 @@ const Index = () => {
     <div className="min-h-screen p-6 space-y-6">
       {/* Header */}
       <div className="text-center mb-8 animate-fade-in">
-        <h1 className="text-5xl font-bold neon-cyan mb-4 pulse-neon">
-          CYBERPUNK ANALYTICS
+        <h1 className="text-5xl font-bold neon-cyan mb-4">
+          Abhijeet's Business Dashboard
         </h1>
         <p className="text-xl text-muted-foreground">
           Real-time Business Intelligence Dashboard
@@ -78,7 +81,7 @@ const Index = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <KPICard
           title="Total Revenue"
-          value={`$${analytics.totalRevenue.toLocaleString()}`}
+          value={`₹${analytics.totalRevenue.toLocaleString()}`}
           change={12.5}
           trend="up"
           icon={<DollarSign />}
@@ -99,7 +102,7 @@ const Index = () => {
         />
         <KPICard
           title="Average Price"
-          value={`$${Math.round(analytics.averagePrice).toLocaleString()}`}
+          value={`₹${Math.round(analytics.averagePrice).toLocaleString()}`}
           change={-2.1}
           trend="down"
           icon={<BarChart3 />}
@@ -113,7 +116,7 @@ const Index = () => {
         <DashboardCard title="Project Status" variant="glass" className="animate-fade-in">
           <div className="space-y-4">
             <div className="flex justify-between items-center">
-              <span>Completed</span>
+              <span>Completed/Delivered</span>
               <span className="neon-green">{analytics.completedProjects}</span>
             </div>
             <div className="flex justify-between items-center">
@@ -125,7 +128,10 @@ const Index = () => {
             <div className="flex justify-between items-center">
               <span>Cancelled</span>
               <span className="neon-pink">
-                {data.filter(item => item.status.toLowerCase() === 'cancelled').length}
+                {data.filter(item => 
+                  item.status.toLowerCase() === 'cancelled' || 
+                  item.status.toLowerCase() === 'canceled'
+                ).length}
               </span>
             </div>
           </div>

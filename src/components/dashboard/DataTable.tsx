@@ -17,10 +17,15 @@ interface DataTableProps {
 
 export function DataTable({ data, title }: DataTableProps) {
   const getStatusVariant = (status: string) => {
-    switch (status.toLowerCase()) {
-      case "completed": return "bg-status-success/20 text-status-success border-status-success/50";
+    const lowerStatus = status.toLowerCase();
+    switch (lowerStatus) {
+      case "completed":
+      case "delivered": 
+        return "bg-status-success/20 text-status-success border-status-success/50";
       case "pending": return "bg-status-warning/20 text-status-warning border-status-warning/50";
-      case "cancelled": return "bg-status-error/20 text-status-error border-status-error/50";
+      case "cancelled":
+      case "canceled": 
+        return "bg-status-error/20 text-status-error border-status-error/50";
       default: return "bg-muted/20 text-muted-foreground border-muted/50";
     }
   };
@@ -50,7 +55,7 @@ export function DataTable({ data, title }: DataTableProps) {
               >
                 <td className="py-3 px-4 font-medium">{row.client}</td>
                 <td className="py-3 px-4 neon-purple">{row.headshots}</td>
-                <td className="py-3 px-4 neon-green">${row.price.toLocaleString()}</td>
+                <td className="py-3 px-4 neon-green">₹{row.price.toLocaleString()}</td>
                 <td className="py-3 px-4">
                   <Badge className={cn("border", getStatusVariant(row.status))}>
                     {row.status}

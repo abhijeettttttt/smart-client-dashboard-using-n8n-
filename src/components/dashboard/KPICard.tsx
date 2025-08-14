@@ -31,7 +31,6 @@ export function KPICard({
     <DashboardCard 
       title={title} 
       variant="glass" 
-      glow 
       className={cn("animate-fade-in", className)}
     >
       <div className="flex items-center justify-between">
