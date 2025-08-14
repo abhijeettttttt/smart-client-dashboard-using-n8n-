@@ -22,7 +22,9 @@ export function DataTable({ data, title }: DataTableProps) {
       case "completed":
       case "delivered": 
         return "bg-status-success/20 text-status-success border-status-success/50";
-      case "pending": return "bg-status-warning/20 text-status-warning border-status-warning/50";
+      case "pending":
+      case "in progress": 
+        return "bg-status-warning/20 text-status-warning border-status-warning/50";
       case "cancelled":
       case "canceled": 
         return "bg-status-error/20 text-status-error border-status-error/50";

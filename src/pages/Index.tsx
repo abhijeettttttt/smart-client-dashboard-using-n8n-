@@ -120,9 +120,12 @@ const Index = () => {
               <span className="neon-green">{analytics.completedProjects}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span>Pending</span>
+              <span>Pending/In Progress</span>
               <span className="neon-purple">
-                {data.filter(item => item.status.toLowerCase() === 'pending').length}
+                {data.filter(item => 
+                  item.status.toLowerCase() === 'pending' || 
+                  item.status.toLowerCase() === 'in progress'
+                ).length}
               </span>
             </div>
             <div className="flex justify-between items-center">
