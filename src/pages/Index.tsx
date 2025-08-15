@@ -65,7 +65,7 @@ const Index = () => {
       {/* Header */}
       <div className="text-center mb-8 animate-fade-in">
         <h1 className="text-5xl font-bold neon-cyan mb-4">
-          Abhijeet's Business Dashboard
+          BUSSINESS DASHBOARD
         </h1>
         <p className="text-xl text-muted-foreground">
           Real-time Business Intelligence Dashboard
