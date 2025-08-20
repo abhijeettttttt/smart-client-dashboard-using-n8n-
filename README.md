@@ -19,7 +19,7 @@
 </li>
 <li>
 <p><strong>Automated Notifications:</strong> Sending timely email updates based on specific workflow triggers.</p>
-
+<a href="https://ibb.co/9HRSwQ7L"><img src="https://i.ibb.co/v42Rs0SG/Screenshot-20250821-024834.png" alt="Screenshot-20250821-024834" border="0" /></a>
 </li>
 </ul>
 <p>&nbsp;</p>
