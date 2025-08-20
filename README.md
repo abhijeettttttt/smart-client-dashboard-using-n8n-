@@ -1,23 +1,25 @@
 <p class="demoTitle">&nbsp;</p>
 <h1>Smart Client Portal with AI-Powered Data Automation</h1>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 <h2>Overview</h2>
-<p>&nbsp;</p>
 <p>This project implements a "Smart Client Portal" that leverages the power of AI-driven data automation to provide dynamic and real-time updates. It allows for seamless control and management of website content and client data through a user-friendly Telegram bot interface. At its core, the system utilizes an AI agent powered by the Google Gemini Chat Model, orchestrated within the N8N automation platform, to interpret user commands from Telegram and translate them into actions that directly manipulate a Google Sheet. This Google Sheet, in turn, serves as a real-time backend for a React-based website dashboard, ensuring instant synchronization of data. Additionally, the system incorporates automated email notifications via Gmail, secured with OAuth 2.0.</p>
 <p>The primary goal of this project is to demonstrate a robust and efficient method for:</p>
 <ul>
 <li>
 <p><strong>Real-time Website Updates:</strong> Implementing instant website content changes driven by data modifications in a Google Sheet.</p>
+  <img width="1885" height="853" alt="dashboard1" src="https://github.com/user-attachments/assets/683d809f-76c2-4488-8494-50eaaafb7438" />
+
 </li>
 <li>
 <p><strong>Dynamic Client Data Management:</strong> Enabling easy and intuitive updating and retrieval of client data through natural language commands via a Telegram bot.</p>
 </li>
 <li>
 <p><strong>AI-Powered Automation:</strong> Utilizing the Google Gemini Chat Model to understand user intent and automate complex data management tasks.</p>
+   <img width="1176" height="647" alt="agent1" src="https://github.com/user-attachments/assets/e569c7cc-67c7-4287-a4f9-4f9a615f28b2" />
 </li>
 <li>
 <p><strong>Automated Notifications:</strong> Sending timely email updates based on specific workflow triggers.</p>
+
 </li>
 </ul>
 <p>&nbsp;</p>
