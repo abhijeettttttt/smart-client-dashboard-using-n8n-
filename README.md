@@ -9,6 +9,7 @@
 <p><strong>Real-time Website Updates:</strong> Implementing instant website content changes driven by data modifications in a Google Sheet.</p>
   <img width="1885" height="853" alt="dashboard1" src="https://github.com/user-attachments/assets/683d809f-76c2-4488-8494-50eaaafb7438" />
 
+
 </li>
 <li>
 <p><strong>Dynamic Client Data Management:</strong> Enabling easy and intuitive updating and retrieval of client data through natural language commands via a Telegram bot.</p>
